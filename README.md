@@ -2,7 +2,7 @@
 Springboot application allowing http requests for managing a freezer catalog
 
 
-#Brief Summary
+# Brief Summary
 Due to not having used springboot in the past, I was unable to complete many of the Unit tests that were expected. Despite this, I conducted some tests by running both GET and POST requests through Postman to determine that the functions developed still worked correctly. Perhaps, with training within Springboot I would have been able to complete unit tests, or alternatively complete some integration tests. 
 
 The method I incorporated that allows adding a food item to the freezer, also functions as the updating method. This could have been improved by separating this into 2 methods, so that anyone using the API could never accidentally update when attempting to add, or vice versa. 
