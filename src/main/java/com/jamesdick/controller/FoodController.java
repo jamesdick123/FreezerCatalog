@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-//also need import the other stuff
+//also need import these classes from the other packages.
 import com.jamesdick.base.Food;
 import com.jamesdick.service.FoodService;
 

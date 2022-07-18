@@ -22,7 +22,7 @@ public class FoodService {
     {
         return foodRepository.findById(id).get();
     }
-
+    //this allows both creating new and updating through post methods.
     public void saveOrUpdate(Food food){
         foodRepository.save(food);
     }
@@ -35,13 +35,13 @@ public class FoodService {
     public Food getFoodByName(String name){
         List<Food> foods = new ArrayList<Food>();
         foodRepository.findAll().forEach(food -> foods.add(food));
-        //cycles through to find first food of that name
-        for(int i = 0; i<foods.size(); i++) {
-            if (name.equalsIgnoreCase(foods.get(i).getName())) { //ignore case for usability
-                return foodRepository.findById(foods.get(i).getId()).get();
+        //for loop through to find FIRST food of that name
+        for (Food food : foods) {
+            if (name.equalsIgnoreCase(food.getName())) { //ignore case for better usability
+                return foodRepository.findById(food.getId()).get();
             }
         }
-        return null; //blank return message if nothing found, could possibly return a "not found" message
+        return null; //blank return if nothing found
     }
 
 
